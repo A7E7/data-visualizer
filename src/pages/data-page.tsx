@@ -1,7 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-interface IDataPageProps {
-}
+interface IDataPageProps {}
 
 const DataPage: React.FunctionComponent<IDataPageProps> = (props) => {
   return <div>Welcome to the data page!</div>;

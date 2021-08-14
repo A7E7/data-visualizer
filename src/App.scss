@@ -1,0 +1,8 @@
+.github-icon {
+  opacity: 0.6;
+  :hover > & {
+    opacity: 9;
+  }
+
+  transition: opacity 0.7s;
+}

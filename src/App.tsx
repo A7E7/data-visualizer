@@ -1,12 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./pages/home-page";
 import DataPage from "./pages/data-page";
 import PerformancePage from "./pages/performance-page";
+import GitHubIcon from "./images/GitHub-Mark-32px.png";
+
+import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -27,18 +29,26 @@ function App() {
                 <Nav.Link>Performance</Nav.Link>
               </LinkContainer>
             </Nav>
+            <Nav>
+              <Nav.Link
+                target="_other"
+                href="https://github.com/A7E7/data-visualizer"
+              >
+                <img className="github-icon" src={GitHubIcon} alt="GitHub" />
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       <Switch>
-        <Route path="/home">
-          <HomePage />
-        </Route>
         <Route path="/data">
           <DataPage />
         </Route>
         <Route path="/performance">
           <PerformancePage />
+        </Route>
+        <Route path="/">
+          <HomePage />
         </Route>
       </Switch>
     </Router>
