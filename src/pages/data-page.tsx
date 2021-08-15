@@ -13,7 +13,10 @@ type Threads = { [key: string]: comment[] };
 const DataPage: React.FunctionComponent<IDataPageProps> = (props) => {
   const [displayState, setDisplayState] = useState("List");
   const [threads, setThreads] = useState<Threads>();
-  const handleSelect = (e: any) => {
+  const handleSelect = (e: string | null) => {
+    if (!e) {
+      throw new Error("displayState selection is not a string!");
+    }
     setDisplayState(e);
   };
 
