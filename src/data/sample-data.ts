@@ -1,4 +1,12 @@
-export const sampleData = [
+export interface comment {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+}
+
+export const sampleData: comment[] = [
   {
     postId: 1,
     id: 1,
