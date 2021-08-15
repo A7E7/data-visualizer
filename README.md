@@ -8,15 +8,15 @@
 
 I've started with setting up the pages. I've decided to go with bootstrap as CSS framework and set up a quick navbar using React Router.
 
-Afterwards, I've implemented displaying the sample data.
+Afterward, I've implemented displaying the sample data.
 I've decided to put the sample data into the project and not fetch it dynamically to avoid disabling CORS.
 
-As suggested in the test description, I've added a "Render Data" (Start) button to actively start the displaying of the data.
-I've also added a "Reset" and "Clear Cache" buttons for easier testing.
+As suggested in the test description, I've added a "Render Data" (Start) button to display the data actively.
+I've also added "Reset" and "Clear Cache" buttons for easier testing.
 
 I've looked into multiple ways to measure rendering performance. I've first stumbled across the React Performance Tools: https://reactjs.org/docs/perf.html
 I've decided not to use them as they are deprecated and instead use the simple Profiler API: https://reactjs.org/docs/profiler.html
-To avoid having to pass data from the data page to the performance page, I've directly implemented the "persisting measurements"-extension and store the measurements inside the local storage.
+To avoid passing data from the data page to the performance page, I've directly implemented the "persisting measurements"-extension and stored the measurements inside the local storage.
 
 Loading the data from storage and displaying it in a table was straightforward.
 
@@ -35,8 +35,8 @@ Loading the data from storage and displaying it in a table was straightforward.
 
 - Add proper types for data entries
 - Add profiler to individual comments/threads to track more granular data than just evaluating rendering all comments/threads
-- Potentially using compound component pattern for switching data/performance views
-- Clean up some shared css
+- Potentially using the compound component pattern for switching data/performance views
+- Clean up some shared CSS
 - Moving some parts of data-page/performance-page into components
 - Investigate profiling options for production if the performance data should be available in a production environment
 - Add more extensions
