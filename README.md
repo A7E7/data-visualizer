@@ -42,8 +42,6 @@ Loading the data from storage and displaying it in a table was straightforward.
 - Add more extensions
 - Setting up a simple backend using f.e. firebase to dynamically fetch the data and store performance measurements inside a database
 
-## Info
-
 ## Available Scripts
 
 In the project directory, you can run:
