@@ -18,11 +18,12 @@ const CommentThread: React.FunctionComponent<ICommentThreadProps> = (props) => {
         />
       </div>
       <div className="comment-thread-secondary">
-        {props.comments.slice(1).map((comment) => (
+        {props.comments.slice(1).map((comment, i) => (
           <UserComment
             name={comment.name}
             email={comment.email}
             body={comment.body}
+            key={i}
           />
         ))}
       </div>
